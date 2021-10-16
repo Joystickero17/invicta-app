@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <title>Invicta App</title>
+    <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row m-3">
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <div class="w-25">
+                    <img src="./img/invicta.jpg" class="img-fluid" alt="">
+                <a href="https://www.vecteezy.com/free-vector/eagle" target="_blank"><small>Eagle Vectors by Vecteezy</small></a> 
+                </div>
+                <h1 class="d-inline mx-5">Invicta App</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <!-- <h2 class="mb-2">App para convertir divisas:</h2> -->
+            <hr>
+            <h3>Dolar a Bolívares:</h3>
+            <div class="col-4">
+                <input placeholder="$" type="number" class="form-control  d-inline" id="dolarPrecio">
+            </div>
+            <div class="col-4">
+                <input placeholder="Bs" type="number" class="form-control d-inline" id="bolivarResultado">
+            </div>
+
+            <div class="col-12 d-flex justify-content-center mt-3">
+                <button class="btn btn-primary mt-1" id="calculateBs">Calcular</button>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <h3>Bolívares a Dolar:</h3>
+            <div class="col-4">
+                <input placeholder="Bs" type="number" class="form-control  d-inline" id="bolivarPrecio">
+            </div>
+            <div class="col-4">
+                <input placeholder="$" type="number" class="form-control d-inline" id="dolarResultado">
+            </div>
+            <div class="col-12 d-flex justify-content-center mt-3">
+                <button class="btn btn-primary mt-1" id="calculateDollar">Calcular</button>
+
+            </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+            <h3 class="text-center">Tasa del día: <span id="dolarTasa"></span> .Bs 
+                <div class="spinner-border text-success" id="dolarLoading" role="status">
+                    <span class="sr-only"></span>
+                </div>
+                <strong class="text-danger" id="errorFetch" style="display: none;">Error de conexión</strong>
+                <button class="btn btn-sm btn-success ml-4" id="refresh" style="display: none;"><i class="fas fa-redo"></i></button>
+            </h3>
+
+        </div>
+    </div>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script src="./functions/requests.js"></script>
+</body>
+
+</html>
